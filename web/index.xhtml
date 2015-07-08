@@ -22,38 +22,38 @@
                     </tr>     
                 </thead>
                 <tbody>
-                    <ui:repeat value="${aic.listPersonInputs}" var="in">
+                    <ui:repeat value="#{aic.listPersonInputs}" var="in">
                         <tr>
                             <td>                       
-                                <h:inputText value="${in.id}"/>  
+                                <h:inputText value="#{in.id}"/>  
                             </td>
                             <td>                       
-                                <h:inputText value="${in.name}" />  
+                                <h:inputText value="#{in.name}" />  
                             </td>
                             <td>                      
-                                <h:inputText value="${in.surname}" />  
+                                <h:inputText value="#{in.surname}" />  
                             </td>
                             <td>                      
-                                <h:inputText value="${in.age}" />  
+                                <h:inputText value="#{in.age}" />  
                             </td>                            
                         </tr>
                     </ui:repeat>
                     <tr>
                         <td>                       
-                            <h:inputText value="${aic.inputPerson.id}"/>  
+                            <h:inputText value="#{aic.inputPerson.id}"/>  
                         </td>
                         <td>                       
-                            <h:inputText value="${aic.inputPerson.name}" />  
+                            <h:inputText value="#{aic.inputPerson.name}" />  
                         </td>
                         <td>                      
-                            <h:inputText value="${aic.inputPerson.surname}" />  
+                            <h:inputText value="#{aic.inputPerson.surname}" />  
                         </td>
                         <td>                      
-                            <h:inputText value="${aic.inputPerson.age}" />  
+                            <h:inputText value="#{aic.inputPerson.age}" />  
                         </td>
                         <td>
                             <h:commandButton value="Əlavə et">
-                                <f:ajax listener="${aic.addPerson}" event="click" execute="@form" render=":addInputForm"/>
+                                <f:ajax listener="#{aic.addPerson}" event="click" execute="@form" render=":addInputForm"/>
                             </h:commandButton>
                         </td>
                     </tr>
